@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Gold Digger Palette -->
+    <color name="Gold_Digger_1">#1F1100</color>
+    <color name="Gold_Digger_2">#5E3E00</color>
+    <color name="Gold_Digger_3">#895F00</color>
+    <color name="Gold_Digger_4">#AF8100</color>
+    <color name="Gold_Digger_5">#D3AC31</color>
+
+    <!-- Vintage Cremes & Greens Palette -->
+    <color name="Vintage_Cremes_Greens_1">#9EA58D</color>
+    <color name="Vintage_Cremes_Greens_2">#CCC098</color>
+    <color name="Vintage_Cremes_Greens_3">#EFE6CD</color>
+    <color name="Vintage_Cremes_Greens_4">#7D8758</color>
+    <color name="Vintage_Cremes_Greens_5">#C5B67B</color>
+
+    <!-- Digital Stock Market on a Tablet Screen Palette -->
+    <color name="Digital_Stock_Market_1">#F24B6A</color>
+    <color name="Digital_Stock_Market_2">#0E3659</color>
+    <color name="Digital_Stock_Market_3">#0ABF04</color>
+    <color name="Digital_Stock_Market_4">#0B8C07</color>
+    <color name="Digital_Stock_Market_5">#D97904</color>
+</resources>
