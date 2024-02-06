@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -106,6 +107,10 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-paging:2.6.1")
+
+    // SwipeRefresh
+    implementation("androidx.compose.material:material:1.6.0")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.20.0")
 }
 
 kapt {
