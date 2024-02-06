@@ -43,7 +43,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
     packaging {
         resources {
@@ -71,14 +71,14 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // KSP
-    implementation("com.google.devtools.ksp:symbol-processing-api:1.9.21-1.0.15")
+    implementation("com.google.devtools.ksp:symbol-processing-api:1.9.22-1.0.17")
 
     // OpenCSV
     implementation("com.opencsv:opencsv:5.5.2")
 
     // Compose Nav Destinations
     implementation("io.github.raamcosta.compose-destinations:core:1.1.2-beta")
-    kapt("io.github.raamcosta.compose-destinations:ksp:1.1.2-beta")
+    ksp("io.github.raamcosta.compose-destinations:ksp:1.1.2-beta")
 
     // Coil Compose
     implementation("io.coil-kt:coil-compose:2.2.2")
@@ -90,7 +90,6 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.50")
     kapt("androidx.hilt:hilt-compiler:1.1.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
 
     // Paging
     implementation("androidx.paging:paging-runtime-ktx:3.2.1")
@@ -105,7 +104,7 @@ dependencies {
 
     // Room
     implementation("androidx.room:room-ktx:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-paging:2.6.1")
 
     // SwipeRefresh
@@ -119,4 +118,8 @@ kapt {
     javacOptions {
         option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
     }
+}
+
+hilt {
+    enableAggregatingTask = false
 }
