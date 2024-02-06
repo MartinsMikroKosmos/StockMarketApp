@@ -1,4 +1,4 @@
-package com.plcoding.stockmarketapp.data.remote.dto
+package com.example.stockmarketapp.data.remote
 
 import okhttp3.ResponseBody
 import retrofit2.http.GET
@@ -8,7 +8,7 @@ interface StockApi {
     @GET("query?function=LISTING_STATUS")
     suspend fun getListings(
         @Query("apikey") apiKey: String,
-    ) : ResponseBody
+    ): ResponseBody
 
     companion object {
         const val API_KEY = "L5QYHTA3T5XP8WQ2"
