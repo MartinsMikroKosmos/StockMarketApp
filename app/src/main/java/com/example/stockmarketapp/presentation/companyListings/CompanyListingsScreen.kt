@@ -1,5 +1,6 @@
 package com.example.stockmarketapp.presentation.companyListings
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,10 +10,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Divider
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
+import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.stockmarketapp.R
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.ramcosta.composedestinations.annotation.Destination
@@ -30,7 +34,9 @@ fun CompanyListingsScreen(
         )
     val state = viewModel.state
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier =
+            Modifier.fillMaxSize()
+                .background(colorResource(id = R.color.Gold_Digger_1)),
     ) {
         OutlinedTextField(
             value = state.searchQuery,
@@ -44,9 +50,19 @@ fun CompanyListingsScreen(
                     .padding(16.dp)
                     .fillMaxWidth(),
             placeholder = {
-                Text(text = "Search...")
+                Text(
+                    text = "Search...",
+                    color = colorResource(id = R.color.Vintage_Cremes_Greens_3),
+                )
             },
             maxLines = 1,
+            colors =
+                TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor = colorResource(id = R.color.Vintage_Cremes_Greens_3),
+                    unfocusedBorderColor = colorResource(id = R.color.Vintage_Cremes_Greens_3).copy(alpha = 0.8f),
+                    cursorColor = colorResource(id = R.color.Vintage_Cremes_Greens_3),
+                    textColor = colorResource(id = R.color.Vintage_Cremes_Greens_3),
+                ),
             singleLine = true,
         )
         SwipeRefresh(

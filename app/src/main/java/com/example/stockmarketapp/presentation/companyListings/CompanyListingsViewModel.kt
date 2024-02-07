@@ -20,7 +20,7 @@ class CompanyListingsViewModel
     constructor(
         private val repository: StockRepository,
     ) : ViewModel() {
-        var state by mutableStateOf(CompanyListingsState())
+        var state by mutableStateOf(CompanyListingState())
 
         private var searchJob: Job? = null
 

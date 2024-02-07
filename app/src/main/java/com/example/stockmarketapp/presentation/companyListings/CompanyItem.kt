@@ -49,11 +49,13 @@ fun CompanyItem(
                         Modifier
                             .weight(1f),
                 )
-                Spacer(modifier = Modifier.width(4.dp))
+                Spacer(
+                    modifier = Modifier.width(4.dp),
+                )
                 Text(
                     text = company.exchange,
                     fontWeight = FontWeight.Light,
-                    color = colorResource(id = R.color.Vintage_Cremes_Greens_3),
+                    color = colorResource(id = R.color.Vintage_Cremes_Greens_4),
                 )
             }
             Spacer(
@@ -62,9 +64,9 @@ fun CompanyItem(
                         .height(8.dp),
             )
             Text(
-                text = "(${company.symbol}",
+                text = "(${company.symbol})",
                 fontStyle = FontStyle.Italic,
-                color = colorResource(id = R.color.Vintage_Cremes_Greens_3),
+                color = colorResource(id = R.color.Vintage_Cremes_Greens_2),
             )
         }
     }
