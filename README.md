@@ -8,7 +8,7 @@ Die Stock Market App ermöglicht es Benutzern, Aktien zu suchen und detaillierte
 
 - **Unternehmensinformationen**: Zeigt detaillierte Informationen zum ausgewählten Unternehmen an, einschließlich Name, Beschreibung, Branche und andere relevante Daten.
 
-- **Aktienchart**: Präsentiert einen interaktiven Chart mit historischen Kursen der ausgewählten Aktie.
+- **Aktienchart**: Präsentiert einen Chart mit Kursen der ausgewählten Aktie vom letzten Tag.
 
 ## Technologien
 
