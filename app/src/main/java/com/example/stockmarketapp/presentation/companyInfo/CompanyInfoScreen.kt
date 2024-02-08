@@ -16,13 +16,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.stockmarketapp.R
 import com.ramcosta.composedestinations.annotation.Destination
 
 @Composable
@@ -37,7 +38,7 @@ fun CompanyInfoScreen(
             modifier =
                 Modifier
                     .fillMaxSize()
-                    .background(Color.LightGray)
+                    .background(color = colorResource(id = R.color.Gold_Digger_2))
                     .padding(16.dp),
         ) {
             state.company?.let { company ->
@@ -90,13 +91,14 @@ fun CompanyInfoScreen(
                 if (state.stockInfos.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(text = "Market Summary")
-                    Spacer(modifier = Modifier.height(32.dp))
+                    Spacer(modifier = Modifier.height(36.dp))
                     StockChart(
                         infos = state.stockInfos,
                         modifier =
                             Modifier
                                 .fillMaxWidth()
                                 .height(250.dp)
+                                .padding(16.dp)
                                 .align(CenterHorizontally),
                     )
                 }

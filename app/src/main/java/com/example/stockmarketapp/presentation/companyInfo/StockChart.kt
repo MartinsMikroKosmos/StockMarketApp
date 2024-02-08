@@ -33,41 +33,37 @@ fun StockChart(
         }
     val upperValue =
         remember(infos) {
-            (infos.maxOfOrNull { it.close }?.plus(1)?.roundToInt() ?: 0)
+            (infos.maxOfOrNull { it.close }?.plus(1))?.roundToInt() ?: 0
         }
     val lowerValue =
         remember(infos) {
-            (infos.minOfOrNull { it.close }?.toInt() ?: 0)
+            infos.minOfOrNull { it.close }?.toInt() ?: 0
         }
     val density = LocalDensity.current
     val textPaint =
-        remember {
+        remember(density) {
             Paint().apply {
                 color = android.graphics.Color.WHITE
                 textAlign = Paint.Align.CENTER
                 textSize = density.run { 12.sp.toPx() }
             }
         }
-
-    Canvas(
-        modifier = modifier,
-    ) {
+    Canvas(modifier = modifier) {
         val spacePerHour = (size.width - spacing) / infos.size
         (0 until infos.size - 1 step 2).forEach { i ->
             val info = infos[i]
             val hour = info.date.hour
-
             drawContext.canvas.nativeCanvas.apply {
                 drawText(
                     hour.toString(),
-                    spacing * i * spacePerHour,
+                    spacing + i * spacePerHour,
                     size.height - 5,
                     textPaint,
                 )
             }
         }
         val priceStep = (upperValue - lowerValue) / 5f
-        (0..5).forEach { i ->
+        (0..4).forEach { i ->
             drawContext.canvas.nativeCanvas.apply {
                 drawText(
                     round(lowerValue + priceStep * i).toString(),
@@ -81,7 +77,6 @@ fun StockChart(
         val strokePath =
             Path().apply {
                 val height = size.height
-
                 for (i in infos.indices) {
                     val info = infos[i]
                     val nextInfo = infos.getOrNull(i + 1) ?: infos.last()
@@ -90,14 +85,10 @@ fun StockChart(
 
                     val x1 = spacing + i * spacePerHour
                     val y1 = height - spacing - (leftRatio * height).toFloat()
-
                     val x2 = spacing + (i + 1) * spacePerHour
                     val y2 = height - spacing - (rightRatio * height).toFloat()
                     if (i == 0) {
-                        moveTo(
-                            x1,
-                            y1,
-                        )
+                        moveTo(x1, y1)
                     }
                     lastX = (x1 + x2) / 2f
                     quadraticBezierTo(
