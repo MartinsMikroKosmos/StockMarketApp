@@ -26,7 +26,10 @@ Die App basiert auf modernen Technologien, einschließlich:
 
 - [Compose Navigation (Raamcosta)](https://github.com/Raamcosta/compose-destinations): Eine Bibliothek für das Navigation Management in Jetpack Compose-Anwendungen.
 
-![App Preview](screenshots/App1.png)
+![App1](https://github.com/MartinsMikroKosmos/StockMarketApp/assets/103416201/1eb57a97-d0db-4ebf-bf8d-93205f402159)
+![App2](https://github.com/MartinsMikroKosmos/StockMarketApp/assets/103416201/8e2eeefb-b58d-49a7-b795-6510984ee03e)
+![App3](https://github.com/MartinsMikroKosmos/StockMarketApp/assets/103416201/6c2fcc01-faa2-482f-84bf-5caf52cdff74)
+![App4](https://github.com/MartinsMikroKosmos/StockMarketApp/assets/103416201/732ca8ee-a0de-4d60-970b-7e1a060d4c44)
 
   
 
