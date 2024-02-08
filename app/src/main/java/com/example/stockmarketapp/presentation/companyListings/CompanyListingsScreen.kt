@@ -17,6 +17,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.stockmarketapp.R
+import com.example.stockmarketapp.presentation.destinations.CompanyInfoScreenDestination
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.ramcosta.composedestinations.annotation.Destination
@@ -82,7 +83,9 @@ fun CompanyListingsScreen(
                             Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    // TODO: Navigate to detail screen
+                                    navigator.navigate(
+                                        CompanyInfoScreenDestination(company.symbol),
+                                    )
                                 }
                                 .padding(16.dp),
                     )
