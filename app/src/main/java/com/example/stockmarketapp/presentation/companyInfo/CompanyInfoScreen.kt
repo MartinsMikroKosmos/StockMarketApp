@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,7 +38,7 @@ fun CompanyInfoScreen(
             modifier =
                 Modifier
                     .fillMaxSize()
-                    .background(color = colorResource(id = R.color.Gold_Digger_2))
+                    .background(color = colorResource(id = R.color.Gold_Digger_5))
                     .padding(16.dp),
         ) {
             state.company?.let { company ->
@@ -57,7 +57,7 @@ fun CompanyInfoScreen(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                Divider(
+                HorizontalDivider(
                     modifier =
                         Modifier
                             .fillMaxWidth(),
@@ -77,7 +77,7 @@ fun CompanyInfoScreen(
                     overflow = TextOverflow.Ellipsis,
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                Divider(
+                HorizontalDivider(
                     modifier =
                         Modifier
                             .fillMaxWidth(),
